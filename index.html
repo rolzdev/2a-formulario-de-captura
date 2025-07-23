@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2A Formulario de Captura</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Page Title</h1>
+    <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+    <fieldset>
+    <legend>Preguntas</legend>
+
+    <p>¿Cuál es tu sistema operativo favorito?</p>
+
+    <label><input type="radio" name="os" value="windows" required> Windows </label> 
+    <label><input type="radio" name="os" value="macos"> MacOS </label>
+    <label><input type="radio" name="os" value="linux"> Linux </label>
+
+    <p> ¿Qué tecnologías utilizas? (Selecciona todas las que correspondan): </p>
+    
+    <label> <input type="checkbox" name="tech" value="html"> HTML </label>
+    <label> <input type="checkbox" name="tech" value="css"> CSS </label>
+    <label> <input type="checkbox" name="tech" value="javascript"> JavaScript </label>
+
+    <legend>Comentarios Finales</legend>
+    <label for="comments">Escribe tus comentarios: </label>
+    <textarea id="comments" name="comments" rows="5"></textarea>
+
+
+</body>
+
+</html>
