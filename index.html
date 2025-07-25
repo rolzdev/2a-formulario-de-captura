@@ -13,44 +13,59 @@
 <body>
     <header>
         <h1>Sistema de Captura</h1>
-        <nav>
-            <ul>
-                <li>Opcion 1</li>
-                <li>Opcion 2</li>
-                <li>Opcion 3</li>
-            </ul>
-        </nav>
     </header>
 
     <h1>Registro de usuarios</h1>
-    <fieldset>
-        <legend>Datos Personales</legend>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" required>
-        <label for="genero">Genero:</label>
-        <label><input type="radio" name="genero" value="femenino" required> Femenino </label> 
-        <label><input type="radio" name="genero" value="masculino"> Masculino </label>
-        <label><input type="radio" name="genero" value="otro">No binario</label>
-    </fieldset>
-    <legend>Preguntas</legend>
+    <h1> Formulario de captura</h1>
+    <form method="post"><br>
+        <fieldset> <!--Primer fieldset para información personal-->
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
 
-    <p>¿Cuál es tu sistema operativo favorito?</p>
+            <label for="edad">Edad: </label>
+            <input type="number" id="edad" name="edad"><br><br>
 
-    <label><input type="radio" name="os" value="windows" required> Windows </label> 
-    <label><input type="radio" name="os" value="macos"> MacOS </label>
-    <label><input type="radio" name="os" value="linux"> Linux </label>
-
-    <p> ¿Qué tecnologías utilizas? (Selecciona todas las que correspondan): </p>
-    
-    <label> <input type="checkbox" name="tech" value="html"> HTML </label>
-    <label> <input type="checkbox" name="tech" value="css"> CSS </label>
-    <label> <input type="checkbox" name="tech" value="javascript"> JavaScript </label>
-
-    <legend>Comentarios Finales</legend>
-    <label for="comments">Escribe tus comentarios: </label>
-    <textarea id="comments" name="comments" rows="5"></textarea>
+            <label for="genero">Genero:</label><br>
+            <input type="radio" name="genero" value="hombre" checked>Hombre
+            <input type="radio" name="genero" value="mujer">Mujer
+        </fieldset><br>
+        <fieldset> <!--Segundo fieldset para preguntas de respuesta unica-->
+            <legend>Pregunta de respuesta única</legend>
+            <p> ¿Cuál de los siguientes carreras profesionales prefieres?</p>
+            <input type="radio" name="carrera" value="ingenieria" checked>Ingeniería<br>
+            <input type="radio" name="carrera" value="medicina">Medicina<br>
+            <input type="radio" name="carrera" value="psicologia">Psicología<br>
+            <input type="radio" name="carrera" value="derecho">Derecho<br>
+            <input type="radio" name="carrera" value="biologia">Biología<br>
+            <p> ¿Con cuál de los siguientes rasgos de la personalidad te identificas mejor?</p>
+            <input type="radio" name="poder" value="experiencia" checked>Curioso, sensible y aventurero.<br>
+            <input type="radio" name="poder" value="conciencia">Organizado, confiable y ordenado.<br>
+            <input type="radio" name="poder" value="extroversion">Sociable, enérgico y orientado a la acción.<br>
+            <input type="radio" name="poder" value="amabilidad">Comprensivo, dispuesto a ayudar <br>
+            <input type="radio" name="poder" value="estabilidad">Tranquilo, capaz de manejar problemas.<br>
+        </fieldset><br>
+        <fieldset><!--Segundo fieldset para preguntas de respuestas multiples-->
+            <legend>Selección de respuesta múltiple</legend>
+            <p>Selecciona tus aficiones preferidas:</p>
+            <input type="checkbox" name="aficiones" value="lectura">Lectura
+            <input type="checkbox" name="aficiones" value="musica">Música
+            <input type="checkbox" name="aficiones" value="idiomas">Idiomas
+            <input type="checkbox" name="aficiones" value="dibujo">Dibujo
+            <input type="checkbox" name="aficiones" value="deportes">Deportes
+            <input type="checkbox" name="aficiones" value="videojuegos">Videojuegos
+            <p>Selecciona los paises a los que te gustaría conocer:</p>
+            <input type="checkbox" name="aficiones" value="alemania">Alemania
+            <input type="checkbox" name="aficiones" value="japon">Japón
+            <input type="checkbox" name="aficiones" value="italia">Italia
+            <input type="checkbox" name="aficiones" value="francia">Francia
+            <input type="checkbox" name="aficiones" value="egipto">Egipto
+            <input type="checkbox" name="aficiones" value="brasil">Brasil
+        </fieldset><br>
+        <legend>Sugerencias o comentarios:</legend>
+        <textarea name="comentarios" id="comentarios"></textarea><br>        
+        <input type="submit" value="Enviar"><br><br>
+    </form>
     
     <footer>
         <p>Derechos reservados</p>
