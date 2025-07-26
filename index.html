@@ -1,78 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>2A Formulario de Captura</title>
     <link rel="stylesheet" href="estilos.css">
-    <style >
-        
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Sistema de Captura</h1>
-    </header>
-
-    <h1> Formulario de captura</h1>
-    <form method="post"><br>
-        <fieldset> <!--Primer fieldset para información personal-->
-            <legend>Datos personales</legend>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre"><br><br>
-
-            <label for="edad">Edad: </label>
-            <input type="number" id="edad" name="edad"><br><br>
-
-            <label for="genero">Genero:</label><br>
-            <input type="radio" name="genero" value="hombre" checked>Hombre
-            <input type="radio" name="genero" value="mujer">Mujer
-        </fieldset><br>
-        <fieldset> <!--Segundo fieldset para preguntas de respuesta unica-->
-            <legend>Pregunta de respuesta única</legend>
-            <p> ¿Cuál de los siguientes carreras profesionales prefieres?</p>
-            <input type="radio" name="carrera" value="ingenieria" checked>Ingeniería<br>
-            <input type="radio" name="carrera" value="medicina">Medicina<br>
-            <input type="radio" name="carrera" value="psicologia">Psicología<br>
-            <input type="radio" name="carrera" value="derecho">Derecho<br>
-            <input type="radio" name="carrera" value="biologia">Biología<br>
-            <p> ¿Con cuál de los siguientes rasgos de la personalidad te identificas mejor?</p>
-            <input type="radio" name="poder" value="experiencia" checked>Curioso, sensible y aventurero.<br>
-            <input type="radio" name="poder" value="conciencia">Organizado, confiable y ordenado.<br>
-            <input type="radio" name="poder" value="extroversion">Sociable, enérgico y orientado a la acción.<br>
-            <input type="radio" name="poder" value="amabilidad">Comprensivo, dispuesto a ayudar <br>
-            <input type="radio" name="poder" value="estabilidad">Tranquilo, capaz de manejar problemas.<br>
-        </fieldset><br>
-        <fieldset><!--Segundo fieldset para preguntas de respuestas multiples-->
-            <legend>Selección de respuesta múltiple</legend>
-            <p>Selecciona tus aficiones preferidas:</p>
-            <input type="checkbox" name="aficiones" value="lectura">Lectura
-            <input type="checkbox" name="aficiones" value="musica">Música
-            <input type="checkbox" name="aficiones" value="idiomas">Idiomas
-            <input type="checkbox" name="aficiones" value="dibujo">Dibujo
-            <input type="checkbox" name="aficiones" value="deportes">Deportes
-            <input type="checkbox" name="aficiones" value="videojuegos">Videojuegos
-            <p>Selecciona los paises a los que te gustaría conocer:</p>
-            <input type="checkbox" name="aficiones" value="alemania">Alemania
-            <input type="checkbox" name="aficiones" value="japon">Japón
-            <input type="checkbox" name="aficiones" value="italia">Italia
-            <input type="checkbox" name="aficiones" value="francia">Francia
-            <input type="checkbox" name="aficiones" value="egipto">Egipto
-            <input type="checkbox" name="aficiones" value="brasil">Brasil
-        </fieldset><br>
-        <fieldset>
-            <legend>Sugerencias o comentarios:</legend>
-            <textarea name="comentarios" id="comentarios"></textarea><br>        
-            <input type="submit" value="Enviar">
-        </fieldset>
-        <br><br>
-    </form>
-    
-    <footer>
-        <p>Derechos reservados</p>
-    </footer>
-
+    <div class="contenedor">
+        <h1> Formulario de captura</h1>
+        <form method="post" action="#" onsubmit="return alert('Datos Enviados\nGracias por sus respuestas!!');">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="captura" id="nombre" name="nombre" required>
+                <label for="edad">Edad: </label>
+                <input type="number" class="captura" id="edad" name="edad"required>
+                <p>Genero:</p>
+                <label><input type="radio" name="genero" value="hombre" checked>Hombre</label> 
+                <label><input type="radio" name="genero" value="mujer">Mujer</label> 
+                <label><input type="radio" name="genero" value="no">Prefiero no responder</label> 
+            </fieldset>
+            <fieldset>
+                <legend>Pregunta de respuesta única</legend>
+                <p> ¿Con cuál de los siguientes carreras eres mas afín?</p>
+                <label><input type="radio" name="carrera" value="artes" checked>Artes y humanidades</label><br>
+                <label><input type="radio" name="carrera" value="ingenieria">Ingeniería, manufactura y construcción</label><br>
+                <label><input type="radio" name="carrera" value="exactas">Ciencias exactas y naturales</label><br>
+                <label><input type="radio" name="carrera" value="sociales">Ciencias sociales y derecho</label><br>
+                <label><input type="radio" name="carrera" value="salud">Ciencias de la salud</label><br>
+                <label><input type="radio" name="carrera" value="administracion">Administración y negocios</label><br>
+                <p> ¿Con cuál de los siguientes rasgos de la personalidad te identificas mejor?</p>
+                <label><input type="radio" name="poder" value="estabilidad" checked>Tranquilo, capaz de manejar problemas.</label><br>
+                <label><input type="radio" name="poder" value="extroversion">Sociable, enérgico y orientado a la acción.</label><br>
+                <label><input type="radio" name="poder" value="experiencia" >Curioso, sensible y aventurero.</label><br>
+                <label><input type="radio" name="poder" value="amabilidad">Comprensivo, dispuesto a ayudar </label><br>
+                <label><input type="radio" name="poder" value="conciencia">Organizado, confiable y ordenado.</label><br>
+            </fieldset><br>
+            <fieldset>
+                <legend>Selección de respuesta múltiple</legend>
+                <p>Selecciona tus aficiones preferidas:</p>
+                <label><input type="checkbox" name="aficiones[]" value="dibujo">Dibujo</label><br>
+                <label><input type="checkbox" name="aficiones[]" value="lectura">Lectura</label><br>
+                <label><input type="checkbox" name="aficiones[]" value="idiomas">Idiomas</label><br>
+                <label><input type="checkbox" name="aficiones[]" value="deportes">Deportes</label><br>
+                <label><input type="checkbox" name="aficiones[]" value="videojuegos">Videojuegos</label><br>
+                <label><input type="checkbox" name="aficiones[]" value="musica">Música</label><br>
+                <p>Selecciona los paises a los que te gustaría conocer:</p>
+                <label><input type="checkbox" name="paises[]" value="egipto">Egipto</label><br>
+                <label><input type="checkbox" name="paises[]" value="china">China</label><br>
+                <label><input type="checkbox" name="paises[]" value="japon">Japón</label><br>
+                <label><input type="checkbox" name="paises[]" value="suiza">Suiza</label><br>
+                <label><input type="checkbox" name="paises[]" value="francia">Francia</label><br>
+                <label><input type="checkbox" name="paises[]" value="brasil">Brasil</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Sugerencias o comentarios:</legend>
+                <label for="comentarios">Como evaluaria nuestro formulario:</label>
+                <textarea name="comentarios" class="captura" id="comentarios"></textarea>    
+            </fieldset>
+            <button type="submit">Enviar</button>
+        </form>
+   </div>
+   <footer>
+    <p>Derechos reservados...</p>
+   </footer>
 </body>
-
 </html>
